@@ -7,7 +7,7 @@
     <OutputType>WinExe</OutputType>
   </PropertyGroup>
   
-  <!-- Kirigakuretora: 某些應用程式或dll元件可能需要故保留 -->
+  <!-- ■ Kirigakuretora: 某些應用程式或dll元件可能需要故保留 -->
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" CanExecute="BtnRun_CommandBinding_CanExecute" Executed="BtnRun_CommandBinding_Executed"></CommandBinding>
+        <CommandBinding Command="ApplicationCommands.Delete" CanExecute="BtnClear_CommandBinding_CanExecute" Executed="BtnClear_CommandBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    
     <Grid>
-        
+        <StackPanel Margin="0" Height="40" Background="YellowGreen" VerticalAlignment="Top">
+            <Label Margin="5" FontSize="16" FontWeight="Bold">加密文字</Label>
+        </StackPanel>
+        <StackPanel Margin="10,40,5,10">
+            <Label Margin="5" FontSize="14" FontWeight="Bold">請輸入加密文字 :</Label>
+            <TextBox x:Name="TB_Input" Margin="5"></TextBox>
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Btn_Run" Width="100"  Margin="10,10,5,10" Command="ApplicationCommands.New">執行</Button>
+                <Button x:Name="Btn_Clear" Width="100" Margin="5,10,10,10" Command="ApplicationCommands.Delete">清除</Button>
+            </StackPanel>
+            <TextBox x:Name="TB_Result" Margin="5" TextWrapping="Wrap" Height="250"></TextBox>
+        </StackPanel>
     </Grid>
 </Window>
